@@ -13,5 +13,5 @@ c.addEventListener('pointerdown',e=>{e.preventDefault();requestJump()},{passive:
 document.querySelectorAll('[data-key]').forEach(b=>b.addEventListener('pointerdown',unlockAudio));
 window.addEventListener('keydown',unlockAudio,{once:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){keys.left=false;keys.right=false;keys.jump=false}});
-start();frame()})();
+start();requestAnimationFrame(frame)})();
 </script></body></html>
